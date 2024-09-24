@@ -1,0 +1,40 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    margin: 25px;
+}
+
+.product-card-image {
+    width: 200px;
+    height: 200px;
+}
+
+.product-card-name {
+    width: 70%;
+    position: relative;
+    background-color: #FFF;
+    padding: 20px 0px;
+    margin-top: -25px;
+    z-index: 10;
+}
+
+.product-card-flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card-first-container {
+    margin: -16px 0px 20px;
+    z-index: 11;
+    position: relative;
+    font-size: 14px;
+}
+
+.product-card-collection{
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #ABABAB;
+}
