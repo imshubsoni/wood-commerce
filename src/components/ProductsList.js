@@ -9,6 +9,7 @@ const ProductsList = () => {
 
     const dispatch = useDispatch();
 
+    // This function dispatches action when filter is changed -- and the filtered products will be saved in FilteredProducts.. which can be retrieved later.
     const handleFilter = () => {
         const collectionValue = document.getElementById('collection-filter').value;
         const colorValue = document.getElementById('color-filter').value;
@@ -17,6 +18,7 @@ const ProductsList = () => {
         dispatch(filterProducts({collectionValue,colorValue,categoryValue}));
     }
 
+    // Get Filtered Products from the redux store
     const products = useSelector(state => state.products.filteredProducts);
 
     return(
@@ -60,6 +62,7 @@ const ProductsList = () => {
                 </div> */}
             </div>
             <div className="product-list">
+                {/* Render product list -- for each product -- render a ProductCard */}
                 { products.map(product => {
                     return <ProductCard product={product} key={product.id}/>
                 })}

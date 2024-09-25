@@ -33,6 +33,11 @@
     transition: all 0.8s ease;
 }
 
+.navigation-menu a {
+    font: unset;
+    text-decoration: unset;
+}
+
 .navigation-menu ul {
     list-style-type: none;
     display: flex;

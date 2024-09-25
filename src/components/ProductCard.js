@@ -3,6 +3,7 @@ import "../utils/styles/ProductList.css";
 
 const ProductCard = ({product}) => {
     return(
+        // Creating a link so that, once clicked, it will redirect to the /product/id (product details page) for the particlar product, based on the product id..
         <Link to={"/product/" + product.id} key={product.id}>
             <div className="product-card">
                 <div className="product-card-image-container">
@@ -21,6 +22,7 @@ const ProductCard = ({product}) => {
                         </div>
                     </div>
                     <div className="product-card-flex-container">
+                        {/* Creating Star rating using empty arrays */}
                         <div className="product-card-rating">
                             {
                                 [...Array(product.star_rating)].map((n,i) => <i className="fa-solid fa-star"></i>)

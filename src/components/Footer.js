@@ -1,7 +1,9 @@
+import "../utils/styles/Footer.css";
+
 const Footer = () => {
     return(
         <div className="footer">
-            Footer
+            Copyright @2024 Wood-Commerce Wood-eStore
         </div>
     )
 }
