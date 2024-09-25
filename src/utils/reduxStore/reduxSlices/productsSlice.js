@@ -12,7 +12,6 @@ const productsSlice = createSlice({
             state.filteredProducts = action.payload;
         },
         filterProducts: (state, action) => {
-            console.log(action.payload);
             state.filteredProducts = state.products.filter((product) => {
                 return (( action.payload.collectionValue === '' ? product : product.product_collection.toLowerCase().replaceAll(' ', '') === action.payload.collectionValue)
                     && (action.payload.colorValue === '' ? product : product.color_options.split(",").includes(action.payload.colorValue))

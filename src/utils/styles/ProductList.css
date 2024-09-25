@@ -24,6 +24,11 @@
     flex-wrap: wrap;
 }
 
+.product-list a {
+    color: unset;
+    text-decoration: unset;
+}
+
 .product-card {
     margin: 25px;
 }
