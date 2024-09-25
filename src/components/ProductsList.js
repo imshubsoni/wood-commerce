@@ -40,7 +40,7 @@ const ProductsList = () => {
                     <select id="color-filter" onChange={handleFilter}>
                         <option value="">Color</option>
                         <option value="black">Black</option>
-                        <option value="white">White</option>
+                        <option value="darkgreen">Dark Green</option>
                         <option value="yellow">Yellow</option>
                         <option value="darkgrey">Dark Grey</option>
                     </select>
@@ -50,7 +50,7 @@ const ProductsList = () => {
                         <option value="">Category</option>
                         <option value="table&chair">Table & Chair</option>
                         <option value="armchair">Armchair</option>
-                        <option value="selves">Selves</option>
+                        <option value="shelves">Shelves</option>
                         <option value="sidetable">Side Table</option>
                     </select>
                 </div>
@@ -63,9 +63,13 @@ const ProductsList = () => {
             </div>
             <div className="product-list">
                 {/* Render product list -- for each product -- render a ProductCard */}
-                { products.map(product => {
-                    return <ProductCard product={product} key={product.id}/>
-                })}
+                {
+                    // Display message when no products are found & if products are found then render them..
+                    products.length === 0 ? <div className="no-products">Too many filters! No such product found.</div> :
+                    products.map(product => {
+                        return <ProductCard product={product} key={product.id}/>
+                    })
+                }
             </div>
         </div>    
     )

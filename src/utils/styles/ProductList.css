@@ -22,6 +22,14 @@
 .product-list {
     display: flex;
     flex-wrap: wrap;
+    width: 75%;
+}
+
+.no-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .product-list a {

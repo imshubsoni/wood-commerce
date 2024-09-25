@@ -11,14 +11,14 @@ const ProductCard = ({product}) => {
                 </div>
                 <div className="product-card-details-container">
                     <div className="product-card-name">
-                        {product.product_name}
+                        {product.product_collection}
                     </div>
                     <div className="product-card-flex-container product-card-first-container">
                         <div className="product-card-collection">
-                            {product.product_collection}
+                            {product.product_category}
                         </div>
                         <div className="product-card-price">
-                            ${product.product_price}
+                            ${product.product_sell_price ? product.product_sell_price : product.product_price}
                         </div>
                     </div>
                     <div className="product-card-flex-container">

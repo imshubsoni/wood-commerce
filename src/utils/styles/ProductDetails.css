@@ -82,6 +82,11 @@
     margin-top: 12px;
 }
 
+.cut-product-price {
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
 .product-details-buy-button-container{
     margin: 0 30px 0 60px;
 }

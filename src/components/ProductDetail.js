@@ -48,9 +48,15 @@ const ProductDetail = () => {
                         <span className="product-details-price-heading">
                             Price Per Unit
                         </span>
-                        <div className="product-price">
+                        {/* If the sell price is present then cut the original price and show the discounted (sell) price */}
+                        <div className={`product-price ${product.product_sell_price ? 'cut-product-price' : ''}`}>
                             ${product.product_price}
                         </div>
+                        { product.product_sell_price && 
+                            <div className="product-price">
+                                ${product.product_sell_price}
+                            </div>
+                        }
                     </div>
                     <div className="product-details-buttons">
                         <div className="product-details-buy-button-container">
